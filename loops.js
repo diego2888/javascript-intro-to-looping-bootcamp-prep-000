@@ -29,12 +29,13 @@ return "done"
 
 }
 
-
 function doWhileLoop(array){
-    do{
-      return ['array']
-    }
-    while (maybeTrue())
-
-
-}
+   function maybeTrue() {
+   return Math.random() >= 0.5
+   }
+   do{
+       --array.length
+  }
+   while(array.length > 0 && maybeTrue());
+   return array
+ }
